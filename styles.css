@@ -214,6 +214,52 @@ details[open] summary::before { content: "– "; }
 
 footer { margin-top: 90px; padding: 30px 0 46px; border-top: 1px solid var(--line); color: var(--paper-dim); font-size: .85rem; }
 
+/* próximamente */
+.soon {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 54px;
+  align-items: center;
+  margin-top: 30px;
+  padding: 52px;
+  background: radial-gradient(ellipse at 18% 20%, #1f4a4a 0%, #0f2427 55%, #0a171a 100%);
+  color: #f2e8cc;
+  border: 1px solid rgba(232, 190, 110, .35);
+  position: relative;
+  overflow: hidden;
+}
+.soon::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(250, 232, 170, .28), transparent 68%);
+  pointer-events: none;
+}
+.soon-cover img { width: 100%; box-shadow: 0 22px 48px rgba(0, 0, 0, .6), 0 0 60px rgba(232, 170, 70, .22); transform: rotate(-2deg); transition: transform .4s; }
+.soon:hover .soon-cover img { transform: rotate(0); }
+.soon-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .78rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: #f0c066;
+}
+.soon-flag span { width: 9px; height: 9px; border-radius: 50%; background: #f0c066; box-shadow: 0 0 10px #f0c066; animation: candle 2.4s ease-in-out infinite; }
+@keyframes candle { 50% { opacity: .35; } }
+.soon h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: .02em; margin: 12px 0 14px; }
+.soon-tag { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: #f0c066; margin-bottom: 18px; max-width: 28em; }
+.soon p { max-width: 38em; margin-bottom: 1em; }
+.soon-meta { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; }
+.soon-meta li { border: 1px solid rgba(240, 192, 102, .5); padding: 4px 14px; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+.soon-follow { font-size: .95rem; color: #c9c2a8; margin-bottom: 0 !important; }
+.soon-follow a { color: #f0c066; }
+
 /* selector de modo */
 .head-right { display: flex; align-items: baseline; gap: 26px; }
 .modes { display: inline-flex; border: 1px solid var(--line); border-radius: 99px; padding: 3px; }
@@ -332,5 +378,7 @@ body, .modes, .buy { transition: background-color .4s, color .4s; }
   .book:nth-of-type(even) .cover { order: 0; }
   .cover { max-width: 240px; }
   .about { grid-template-columns: 1fr; gap: 36px; }
+  .soon { grid-template-columns: 1fr; gap: 32px; padding: 30px 22px; }
+  .soon-cover { max-width: 240px; }
   .note { display: block; margin: 12px 0 0; }
 }

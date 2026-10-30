@@ -298,6 +298,32 @@
   <footer>© 2026 Mario S. Bermejo · La Estantería Infinita · Libros disponibles en Amazon Kindle · Precios orientativos, pueden variar en Amazon</footer>
 </div>
 
+<div class="fire-glow" id="fire-glow" aria-hidden="true"></div>
+
+<div class="dock">
+  <div class="sound" id="sound">
+    <button type="button" id="sound-btn" aria-pressed="false" aria-label="Activar sonido ambiente">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="w1" d="M16.5 8.5a5 5 0 0 1 0 7"/><path class="w2" d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <span id="sound-label">Sonido ambiente</span>
+    </button>
+    <input type="range" id="sound-vol" min="0" max="100" step="1" value="60" aria-label="Volumen">
+  </div>
+  <button type="button" class="fire-tab" id="fire-open" aria-expanded="false" aria-controls="chimenea">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2c1 3.5-1.5 5-1.5 7.5 0 1 .6 1.8 1.4 2.3C9.200 11 8 9.500 8 8c-3 2.500-4 5-4 7.500C4 19.500 7.500 22 12 22s8-2.500 8-6.500c0-3-2-5-3.500-7-.3 1.500-1 2.500-2 3C14.500 8.500 14.500 4.500 12 2z"/></svg>
+    <span>Chimenea</span>
+  </button>
+</div>
+
+<section class="chimenea" id="chimenea" aria-hidden="true" aria-label="Chimenea encendida">
+  <canvas id="fire-canvas"></canvas>
+  <div class="fire-ctl">
+    <button type="button" id="fire-mute" aria-pressed="false">Silenciar crepitar</button>
+    <button type="button" id="fire-full">Pantalla completa</button>
+    <button type="button" id="fire-close">Cerrar</button>
+  </div>
+</section>
+
+<script src="ambiente.js" defer></script>
 <script>
   (function () {
     var root = document.documentElement;

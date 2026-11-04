@@ -13,15 +13,16 @@
     sinc8: { src: 'audio/sinc-8.mp3', vol: 1, label: 'Cenital: La firma de Praga' },
     buho: { src: 'audio/buho.mp3', vol: 0.9, label: 'Búho del jardín' },
     tren: { src: 'audio/tren-2.mp3', vol: 0.9, label: 'Tren lejano' },
+    musica: { src: 'audio/musica-tres-reglas.mp3', vol: 0.8, label: 'Jazz de Tres reglas' },
     fuego: { src: 'audio/fuego.mp3', vol: 1, label: 'Chimenea' }
   };
-  var ZONES = [['proximamente', 'grillos'], ['el-jardin-que-mira', 'buho'], ['via-libre', 'tren']];
+  var ZONES = [['proximamente', 'grillos'], ['tres-reglas', 'musica'], ['el-jardin-que-mira', 'buho'], ['via-libre', 'tren']];
 
   var SINC = ['fragmento-ajeno', 'voz-prestada', 'el-nino-sin-registro', 'los-registros-bajos', 'la-firma-de-kessel', 'la-duda-de-teo', 'treinta-y-ocho-casos', 'la-firma-de-praga'];
-  var MAXV = 0.5; /* tope del volumen general (el control llega a 100 % = 0.5) */
+  var MAXV = 0.2; /* tope del volumen general: sonido de fondo, el control llega a 100 % = 0.2 */
   var ctx = null, master = null, nodes = {};
   var state = { ambient: false, fire: false, fireMuted: false, zone: null };
-  var vol = 0.6;
+  var vol = 0.5;
   try { var sv = parseFloat(localStorage.getItem('volumen')); if (sv >= 0 && sv <= 1) vol = sv; } catch (e) {}
 
   var btn = document.getElementById('sound-btn'), label = document.getElementById('sound-label'), slider = document.getElementById('sound-vol');

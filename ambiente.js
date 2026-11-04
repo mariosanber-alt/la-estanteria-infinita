@@ -157,7 +157,7 @@
     openBtn.setAttribute('aria-expanded', on ? 'true' : 'false');
     panel.setAttribute('aria-hidden', on ? 'false' : 'true');
     if (!on) setFull(false);
-    if (on) { init(); size(); if (!raf) { last = performance.now(); raf = requestAnimationFrame(frame); } }
+    if (on) { init(); setFull(true); size(); if (!raf) { last = performance.now(); raf = requestAnimationFrame(frame); } }
     update();
   }
   function setFull(on) {
@@ -183,7 +183,7 @@
 
   /* Hoguera: fotografías reales de fuego que se funden entre sí, con calor que ondula,
      parpadeo de luz y brasas que suben por encima. */
-  var frames = panel.querySelectorAll('.fire-frames img'), dim = document.getElementById('fire-dim');
+  var frames = panel.querySelectorAll('.fire-frames img.l'), dim = document.getElementById('fire-dim');
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var W = 0, H = 0, dpr = 1, cur = 0, nextSwap = 0, flick = 1, nextFlick = 0;
   function size() {

@@ -19,7 +19,7 @@
   var ZONES = [['proximamente', 'grillos'], ['tres-reglas', 'musica'], ['el-jardin-que-mira', 'buho'], ['via-libre', 'tren']];
 
   var SINC = ['fragmento-ajeno', 'voz-prestada', 'el-nino-sin-registro', 'los-registros-bajos', 'la-firma-de-kessel', 'la-duda-de-teo', 'treinta-y-ocho-casos', 'la-firma-de-praga'];
-  var MAXV = 0.2; /* tope del volumen general: sonido de fondo, el control llega a 100 % = 0.2 */
+  var MAXV = 0.14; /* tope del volumen general: sonido de fondo, el control llega a 100 % = 0.14 */
   var ctx = null, master = null, nodes = {};
   var state = { ambient: false, fire: false, fireMuted: false, zone: null };
   var vol = 0.5;

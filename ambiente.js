@@ -12,7 +12,7 @@
     sinc7: { src: 'audio/sinc-7.mp3', vol: 1, label: 'Cenital: Treinta y ocho casos' },
     sinc8: { src: 'audio/sinc-8.mp3', vol: 1, label: 'Cenital: La firma de Praga' },
     buho: { src: 'audio/buho.mp3', vol: 0.9, label: 'Búho del jardín' },
-    tren: { src: 'audio/tren.mp3', vol: 0.9, label: 'Tren lejano' },
+    tren: { src: 'audio/tren-2.mp3', vol: 0.9, label: 'Tren lejano' },
     fuego: { src: 'audio/fuego.mp3', vol: 1, label: 'Chimenea' }
   };
   var ZONES = [['proximamente', 'grillos'], ['el-jardin-que-mira', 'buho'], ['via-libre', 'tren']];

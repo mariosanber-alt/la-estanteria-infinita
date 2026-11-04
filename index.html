@@ -376,6 +376,14 @@
 </div>
 
 <section class="chimenea" id="chimenea" aria-hidden="true" aria-label="Chimenea encendida">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="fire-heat" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.010 0.018" numOctaves="2" seed="4" result="n"><animate attributeName="baseFrequency" dur="9s" repeatCount="indefinite" values="0.010 0.018;0.014 0.024;0.010 0.018"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="16" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+  <div class="fire-frames" aria-hidden="true">
+    <img class="on" src="img/hoguera-1.jpg" alt="" decoding="async">
+    <img src="img/hoguera-2.jpg" alt="" decoding="async">
+    <img src="img/hoguera-3.jpg" alt="" decoding="async">
+    <img src="img/hoguera-4.jpg" alt="" decoding="async">
+  </div>
+  <div class="fire-dim" id="fire-dim" aria-hidden="true"></div>
   <canvas id="fire-canvas"></canvas>
   <div class="fire-ctl">
     <button type="button" id="fire-mute" aria-pressed="false">Silenciar crepitar</button>

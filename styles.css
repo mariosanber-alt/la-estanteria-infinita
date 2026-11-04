@@ -469,11 +469,17 @@ body.fire-panel { padding-bottom: 40vh; }
 .chimenea {
   position: fixed; left: 0; right: 0; bottom: 0; height: 40vh; z-index: 55;
   transform: translateY(105%); transition: transform .6s cubic-bezier(.2,.8,.2,1), height .5s ease;
-  background: #0b0705; border-top: 2px solid #3a2615; visibility: hidden;
+  background: #0b0705; visibility: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16%); mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
 }
 .chimenea.open { transform: none; visibility: visible; }
-.chimenea.full { top: 0; height: auto; border: 0; z-index: 80; }
-.chimenea canvas { width: 100%; height: 100%; display: block; }
+.chimenea.full { top: 0; height: auto; z-index: 80; -webkit-mask-image: none; mask-image: none; }
+.chimenea canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+.fire-frames { position: absolute; inset: 0; overflow: hidden; filter: url(#fire-heat); }
+.fire-frames img { position: absolute; inset: -6%; width: 112%; height: 112%; max-width: none; object-fit: cover; object-position: 50% 64%; opacity: 0; transition: opacity 2s ease-in-out; }
+.fire-frames img.on { opacity: 1; }
+.fire-dim { position: absolute; inset: 0; background: #1a0600; opacity: 0; pointer-events: none; }
+.fire-dim::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 55%, transparent 45%, rgba(0, 0, 0, .55) 100%); }
 .fire-ctl { position: absolute; top: 10px; right: 12px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 .fire-ctl button {
   background: rgba(20, 12, 8, .72); color: #f1ead9; border: 1px solid rgba(255, 200, 120, .35);
@@ -494,7 +500,8 @@ body.fire-full { overflow: hidden; }
   .fire-ctl button { padding: 5px 10px; font-size: .72rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .chimenea, .dock, .fire-glow { transition: none; }
+  .chimenea, .dock, .fire-glow, .fire-frames img { transition: none; }
+  .fire-frames { filter: none; }
 }
 
 /* ---------- Próximamente: Tres reglas para no quererte ---------- */

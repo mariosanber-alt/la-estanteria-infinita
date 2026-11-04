@@ -114,7 +114,7 @@ nav a:hover { color: var(--amber); }
   scrollbar-width: none;
 }
 .shelf::-webkit-scrollbar { display: none; }
-.shelf a { flex: 1 1 0; min-width: 96px; transition: transform .25s; }
+.shelf a { flex: 1 1 0; min-width: 80px; transition: transform .25s; }
 .shelf a:hover { transform: translateY(-10px); }
 .shelf img { width: 100%; height: auto; box-shadow: 0 10px 22px var(--shadow); }
 .shelf-board {

@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #0d1019;
   --ink-2: #141826;
   --paper: #f1ead9;
@@ -496,3 +496,39 @@ body.fire-full { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .chimenea, .dock, .fire-glow { transition: none; }
 }
+
+/* ---------- Próximamente: Tres reglas para no quererte ---------- */
+.tr { position: relative; overflow: hidden; margin: 56px 0; border: 1px solid rgba(240, 192, 102, .4); border-radius: 6px; color: #f4ecdc; background: #120b08; isolation: isolate; }
+.tr-bg { position: absolute; inset: 0; z-index: -1; }
+.tr-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease; }
+.tr-bg img.on { opacity: 1; }
+.tr-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 7, 5, .92) 0%, rgba(12, 7, 5, .7) 55%, rgba(12, 7, 5, .45) 100%); }
+.tr-main { display: grid; grid-template-columns: minmax(0, 230px) minmax(0, 1fr); gap: 40px; padding: 44px 44px 30px; align-items: center; }
+.tr-cover img { width: 100%; box-shadow: 0 22px 48px rgba(0, 0, 0, .65); transform: rotate(-2deg); transition: transform .4s; }
+.tr:hover .tr-cover img { transform: rotate(0); }
+.tr-flag { display: inline-flex; align-items: center; gap: 9px; font-size: .78rem; letter-spacing: .26em; text-transform: uppercase; color: #f0c066; margin: 0 0 6px; }
+.tr-flag span { width: 9px; height: 9px; border-radius: 50%; background: #f0c066; box-shadow: 0 0 10px #f0c066; animation: candle 2.4s ease-in-out infinite; }
+.tr h2 { font-size: clamp(2rem, 4.6vw, 3.2rem); margin: 10px 0 12px; color: #fff7e6; }
+.tr-tag { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: #f0c066; }
+.tr-text p { max-width: 40em; margin-bottom: 1em; }
+.tr-meta { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+.tr-meta li { border: 1px solid rgba(240, 192, 102, .5); padding: 4px 14px; font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; }
+.gancho { position: relative; padding: 8px 44px 34px; }
+.gancho-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+.gancho-title { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; letter-spacing: .26em; text-transform: uppercase; color: #f0c066; margin: 0; }
+.gancho-buy { background: #f0c066; color: #1a1206; font: 700 .9rem var(--sans); padding: 10px 20px; border-radius: 99px; text-decoration: none; transition: transform .2s, background .2s; }
+.gancho-buy:hover { background: #ffd58a; transform: translateY(-2px); }
+.gancho-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.gancho-row figure { position: relative; margin: 0; aspect-ratio: 9 / 16; overflow: hidden; border: 1px solid rgba(240, 192, 102, .35); }
+.gancho-row img { width: 100%; height: 100%; object-fit: cover; display: block; filter: blur(6px) saturate(.8); transform: scale(1.1); }
+.gancho-row figure::after { content: ""; position: absolute; inset: 0; background: rgba(10, 6, 4, .35); }
+.gancho-row span { position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(10, 6, 4, .75); border: 1px solid #f0c066; color: #f0c066; display: grid; place-items: center; font: 700 1rem var(--sans); }
+.gancho-note { font-size: .88rem; color: #c9c2a8; margin: 14px 0 0; }
+@media (max-width: 760px) {
+  .tr-main { grid-template-columns: 1fr; gap: 26px; padding: 30px 22px 22px; }
+  .tr-cover { max-width: 200px; }
+  .gancho { padding: 6px 22px 26px; }
+  .gancho-row { grid-template-columns: repeat(5, 38vw); overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding-bottom: 6px; }
+  .gancho-row figure { scroll-snap-align: start; }
+}
+@media (prefers-reduced-motion: reduce) { .tr-bg img { transition: none; } }

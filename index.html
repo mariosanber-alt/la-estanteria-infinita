@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -102,6 +102,47 @@
         <figure><img src="img/ordal-lamina-10.jpg" alt="Lámina X: La casa de la ribera" loading="lazy"></figure>
       </div>
       <button class="car-btn car-next" type="button" aria-label="Lámina siguiente">&#8250;</button>
+    </div>
+  </aside>
+
+  <!-- PRÓXIMAMENTE: TRES REGLAS -->
+  <aside class="tr" id="tres-reglas" aria-label="Próximamente: Tres reglas para no quererte">
+    <div class="tr-bg" aria-hidden="true">
+      <img class="on" src="img/tres-reglas-banner-1.jpg" alt="">
+      <img src="img/tres-reglas-banner-2.jpg" alt="" loading="lazy">
+      <img src="img/tres-reglas-banner-3.jpg" alt="" loading="lazy">
+      <img src="img/tres-reglas-banner-4.jpg" alt="" loading="lazy">
+      <img src="img/tres-reglas-banner-5.jpg" alt="" loading="lazy">
+    </div>
+    <div class="tr-main">
+      <div class="tr-cover"><img src="img/tres-reglas.jpg" alt="Portada de Tres reglas para no quererte" loading="lazy"></div>
+      <div class="tr-text">
+        <p class="tr-flag"><span></span>Próximamente</p>
+        <h2>Tres reglas para no quererte</h2>
+        <p class="tr-tag">Seis semanas. Tres reglas. Nada de enamorarse.</p>
+        <p>Lucía es chef y tiene restaurante propio. Lleva meses callándose lo que siente por Álvaro, el periodista que cada jueves ocupa un taburete en su barra con la misma ironía de siempre. Cuando ella le propone un trato, él acepta.</p>
+        <p>Seis semanas. Nada de apellidos, nada de pasar la noche, nada de enamorarse. Cuarenta y dos días sin preguntas sobre el futuro. Lo que ninguno de los dos cuenta pesa más que cualquier regla, y el día cuarenta y tres llega aunque nadie quiera nombrarlo.</p>
+        <ul class="tr-meta">
+          <li>Novela independiente</li>
+          <li>A dos voces</li>
+          <li>+18</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gancho" aria-label="Láminas censuradas del libro">
+      <div class="gancho-head">
+        <p class="gancho-title"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> Láminas censuradas</p>
+        <a class="gancho-buy" href="https://www.paypal.me/srheavysabio/0.50EUR" target="_blank" rel="noopener">Desbloquear las 5 por 0,50 €</a>
+      </div>
+      <div class="gancho-row">
+        <figure><img src="img/tres-reglas-gancho-1.jpg" alt="Lámina 1 censurada" loading="lazy"><span>1</span></figure>
+        <figure><img src="img/tres-reglas-gancho-2.jpg" alt="Lámina 2 censurada" loading="lazy"><span>2</span></figure>
+        <figure><img src="img/tres-reglas-gancho-3.jpg" alt="Lámina 3 censurada" loading="lazy"><span>3</span></figure>
+        <figure><img src="img/tres-reglas-gancho-4.jpg" alt="Lámina 4 censurada" loading="lazy"><span>4</span></figure>
+        <figure><img src="img/tres-reglas-gancho-5.jpg" alt="Lámina 5 censurada" loading="lazy"><span>5</span></figure>
+      </div>
+      <p class="gancho-note">El pago se hace en PayPal. Cuando me llegue, te envío las 5 láminas al correo de tu cuenta de PayPal.</p>
     </div>
   </aside>
 
@@ -440,6 +481,17 @@
       ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { car.addEventListener(ev, function () { paused = true; }, { passive: true }); });
       ['mouseleave', 'focusout'].forEach(function (ev) { car.addEventListener(ev, function () { paused = false; }); });
       if (!reduce) timer = setInterval(function () { if (!paused && !document.hidden) go(1); }, 4200);
+    }
+
+    var trImgs = document.querySelectorAll('.tr-bg img');
+    if (trImgs.length > 1 && !reduce) {
+      var trIdx = 0;
+      setInterval(function () {
+        if (document.hidden) return;
+        trImgs[trIdx].classList.remove('on');
+        trIdx = (trIdx + 1) % trImgs.length;
+        trImgs[trIdx].classList.add('on');
+      }, 5200);
     }
 
     var box = document.getElementById('sparkles');

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Lámina de Cuentas de Ordal</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#120b08;color:#f4ecdc;font:1.05rem/1.5 Georgia,serif;text-align:center;padding:24px}a.b{display:inline-block;margin-top:14px;background:#f0c066;color:#1a1206;font:700 1rem sans-serif;padding:12px 24px;border-radius:99px;text-decoration:none}b{color:#f0c066}</style>
+</head>
+<body>
+<div>
+<p>Lámina <b id="n"></b> de <i>Cuentas de Ordal</i>: 0,20 €</p>
+<p>En la nota del pago de PayPal escribe <b id="t"></b>.<br>Cuando me llegue, te envío la lámina al correo de tu cuenta de PayPal.</p>
+<a class="b" href="https://www.paypal.me/srheavysabio/0.20EUR">Pagar 0,20 € en PayPal</a>
+</div>
+<script>
+var n = parseInt(new URLSearchParams(location.search).get('n'), 10);
+if (!(n >= 1 && n <= 10)) n = '';
+document.getElementById('n').textContent = n;
+document.getElementById('t').textContent = '«Ordal ' + n + '»';
+</script>
+</body>
+</html>

@@ -515,7 +515,7 @@ body.fire-full { overflow: hidden; }
 .tr-bg { position: absolute; inset: 0; z-index: -1; }
 .tr-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.6s ease; }
 .tr-bg img.on { opacity: 1; }
-.tr-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 7, 5, .92) 0%, rgba(12, 7, 5, .7) 55%, rgba(12, 7, 5, .45) 100%); }
+.tr-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12, 7, 5, .86) 0%, rgba(12, 7, 5, .58) 50%, rgba(12, 7, 5, .12) 100%); }
 .tr-main { display: grid; grid-template-columns: minmax(0, 230px) minmax(0, 1fr); gap: 40px; padding: 44px 44px 30px; align-items: center; }
 .tr-cover img { width: 100%; box-shadow: 0 22px 48px rgba(0, 0, 0, .65); transform: rotate(-2deg); transition: transform .4s; }
 .tr:hover .tr-cover img { transform: rotate(0); }
@@ -545,3 +545,13 @@ body.fire-full { overflow: hidden; }
   .gancho-row figure { scroll-snap-align: start; }
 }
 @media (prefers-reduced-motion: reduce) { .tr-bg img { transition: none; } }
+
+/* láminas de pago de Ordal (alternas) */
+.car-note { font-size: .86rem; color: #c9c2a8; margin: -6px 0 14px !important; }
+.car-track figure.lock { position: relative; }
+.car-track figure.lock img { filter: saturate(.8); }
+.car-track figure.lock::after { content: ""; position: absolute; inset: 0; background: rgba(10, 6, 4, .4); pointer-events: none; }
+.lock-btn { position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 4px; background: rgba(10, 6, 4, .82); color: #f0c066; border: 1px solid #f0c066; border-radius: 14px; padding: 12px 14px; font: 700 .85rem var(--sans); text-decoration: none; text-align: center; transition: background .2s, color .2s; }
+.lock-btn b { font-size: 1.05rem; }
+.lock-btn:hover { background: #f0c066; color: #1a1206; }
+.car-track figure.lock:hover img { transform: none; }

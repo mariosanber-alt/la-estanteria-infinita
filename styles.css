@@ -100,7 +100,7 @@ nav a:hover { color: var(--amber); }
   letter-spacing: -.015em;
   max-width: 12em;
 }
-.hero h1 span { color: var(--amber); font-style: italic; }
+.hero h1 span { color: var(--amber); }
 .hero p.lead { margin-top: 28px; max-width: 34em; color: var(--paper-dim); font-size: 1.1rem; }
 
 /* estantería de portadas */
@@ -251,7 +251,7 @@ footer { margin-top: 90px; padding: 30px 0 46px; border-top: 1px solid var(--lin
   text-transform: uppercase;
   color: #f0c066;
 }
-.soon-flag span { width: 9px; height: 9px; border-radius: 50%; background: #f0c066; box-shadow: 0 0 10px #f0c066; animation: candle 2.4s ease-in-out infinite; }
+.soon-flag span { width: 9px; height: 9px; border-radius: 50%; background: #f0c066; }
 @keyframes candle { 50% { opacity: .35; } }
 .soon h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: .02em; margin: 12px 0 14px; }
 .soon-tag { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: #f0c066; margin-bottom: 18px; max-width: 28em; }
@@ -392,12 +392,7 @@ body, .modes, .buy { transition: background-color .4s, color .4s; }
 :root[data-theme="fantasy"] .book h3 { font-family: var(--display); font-weight: 700; }
 :root[data-theme="fantasy"] .hero h1 span,
 :root[data-theme="fantasy"] .brand em {
-  background: linear-gradient(90deg, #ffc83d, #ff8fd1, #5df0d0, #ffc83d);
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: shimmer 6s linear infinite;
+  color: #ffc83d;
 }
 @keyframes shimmer { to { background-position: 300% 0; } }
 :root[data-theme="fantasy"] .shelf a { animation: bob 5s ease-in-out infinite; }
@@ -503,7 +498,7 @@ body.fire-full { overflow: hidden; }
   .sound button span { display: none; }
   .sound.on input { width: 64px; }
   body.fire-panel .dock { bottom: calc(40vh + 10px); }
-  .fire-ctl button { padding: 5px 10px; font-size: .72rem; }
+  .fire-ctl button { padding: 6px 12px; font-size: .82rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .chimenea, .dock, .fire-glow, .fire-frames img { transition: none; }
@@ -520,7 +515,7 @@ body.fire-full { overflow: hidden; }
 .tr-cover img { width: 100%; box-shadow: 0 22px 48px rgba(0, 0, 0, .65); transform: rotate(-2deg); transition: transform .4s; }
 .tr:hover .tr-cover img { transform: rotate(0); }
 .tr-flag { display: inline-flex; align-items: center; gap: 9px; font-size: .78rem; letter-spacing: .26em; text-transform: uppercase; color: #f0c066; margin: 0 0 6px; }
-.tr-flag span { width: 9px; height: 9px; border-radius: 50%; background: #f0c066; box-shadow: 0 0 10px #f0c066; animation: candle 2.4s ease-in-out infinite; }
+.tr-flag span { width: 9px; height: 9px; border-radius: 50%; background: #f0c066; }
 .tr h2 { font-size: clamp(2rem, 4.6vw, 3.2rem); margin: 10px 0 12px; color: #fff7e6; }
 .tr-tag { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: #f0c066; }
 .tr-text p { max-width: 40em; margin-bottom: 1em; }

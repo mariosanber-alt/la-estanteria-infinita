@@ -11,6 +11,9 @@
     sinc6: { src: 'audio/sinc-6-r.mp3', vol: 1, label: 'Cenital: La duda de Teo' },
     sinc7: { src: 'audio/sinc-7-r.mp3', vol: 1, label: 'Cenital: Treinta y ocho casos' },
     sinc8: { src: 'audio/sinc-8-r.mp3', vol: 1, label: 'Cenital: La firma de Praga' },
+    sinc9: { src: 'audio/sinc-9-r.mp3', vol: 1, label: 'Cenital: El campo vacío' },
+    sinc10: { src: 'audio/sinc-10-r.mp3', vol: 1, label: 'Cenital: El inventario' },
+    sinc11: { src: 'audio/sinc-11-r.mp3', vol: 1, label: 'Cenital: Para quien vuelva primero' },
     buho: { src: 'audio/buho.mp3', vol: 0.9, label: 'Búho del jardín' },
     tren: { src: 'audio/tren-2.mp3', vol: 0.9, label: 'Tren lejano' },
     musica: { src: 'audio/musica-tres-reglas.mp3', vol: 0.8, label: 'Jazz de Tres reglas' },
@@ -18,7 +21,7 @@
   };
   var ZONES = [['proximamente', 'grillos'], ['tres-reglas', 'musica'], ['el-jardin-que-mira', 'buho'], ['via-libre', 'tren']];
 
-  var SINC = ['fragmento-ajeno', 'voz-prestada', 'el-nino-sin-registro', 'los-registros-bajos', 'la-firma-de-kessel', 'la-duda-de-teo', 'treinta-y-ocho-casos', 'la-firma-de-praga'];
+  var SINC = ['fragmento-ajeno', 'voz-prestada', 'el-nino-sin-registro', 'los-registros-bajos', 'la-firma-de-kessel', 'la-duda-de-teo', 'treinta-y-ocho-casos', 'la-firma-de-praga', 'el-campo-vacio', 'el-inventario', 'para-quien-vuelva-primero'];
   var MAXV = 0.07; /* tope del volumen general: sonido de fondo muy suave; el control llega a 100 % = 0.07 */
   var ctx = null, master = null, nodes = {};
   var state = { ambient: false, fire: false, fireMuted: false, zone: null };

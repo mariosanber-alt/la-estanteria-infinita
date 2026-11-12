@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-12T18:39:42.335Z",
+        "reason": "Fotogramas de la hoguera con fundido por transicion"
+      }
+    ]
+  }
+}

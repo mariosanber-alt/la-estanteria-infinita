@@ -99,7 +99,9 @@
         SINC.forEach(function (id, n) {
           var b = document.getElementById(id);
           if (!b) return;
-          var br = b.getBoundingClientRect(), d = Math.abs((br.top + br.bottom) / 2 - y);
+          var br = b.getBoundingClientRect();
+          if (!br.height || b.closest('details.older:not([open])')) return; /* libro dentro de la lista plegada */
+          var d =Math.abs((br.top + br.bottom) / 2 - y);
           if (d < bd) { bd = d; best = 'sinc' + (n + 1); }
         });
         return best;

@@ -14,12 +14,14 @@
     sinc9: { src: 'audio/sinc-9-r.mp3', vol: 1, label: 'Cenital: El campo vacío' },
     sinc10: { src: 'audio/sinc-10-r.mp3', vol: 1, label: 'Cenital: El inventario' },
     sinc11: { src: 'audio/sinc-11-r.mp3', vol: 1, label: 'Cenital: Para quien vuelva primero' },
+    luz: { src: 'audio/lo-que-la-luz-r.mp3', vol: 1, label: 'Vallormes: Lo que la luz dejó atrás' },
+    vecino: { src: 'audio/un-vecino-r.mp3', vol: 1, label: 'Navalsarda: Un vecino de más' },
     buho: { src: 'audio/buho.mp3', vol: 0.9, label: 'Búho del jardín' },
     tren: { src: 'audio/tren-2.mp3', vol: 0.9, label: 'Tren lejano' },
     musica: { src: 'audio/musica-tres-reglas.mp3', vol: 0.8, label: 'Jazz de Tres reglas' },
     fuego: { src: 'audio/fuego.mp3', vol: 1, label: 'Chimenea' }
   };
-  var ZONES = [['proximamente', 'grillos'], ['tres-reglas', 'musica'], ['el-jardin-que-mira', 'buho'], ['via-libre', 'tren']];
+  var ZONES = [['proximamente', 'grillos'], ['tres-reglas', 'musica'], ['lo-que-la-luz-dejo-atras', 'luz'], ['un-vecino-de-mas', 'vecino'], ['el-jardin-que-mira', 'buho'], ['via-libre', 'tren']];
 
   var SINC = ['fragmento-ajeno', 'voz-prestada', 'el-nino-sin-registro', 'los-registros-bajos', 'la-firma-de-kessel', 'la-duda-de-teo', 'treinta-y-ocho-casos', 'la-firma-de-praga', 'el-campo-vacio', 'el-inventario', 'para-quien-vuelva-primero'];
   var MAXV = 0.07; /* tope del volumen general: sonido de fondo muy suave; el control llega a 100 % = 0.07 */

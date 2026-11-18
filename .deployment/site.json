@@ -1,0 +1,21 @@
+{
+  "name": "la-estanteria-infinita",
+  "pages": [
+    "index.html",
+    "privacidad.html",
+    "aviso-legal.html"
+  ],
+  "assets": [
+    "styles.css",
+    "ambiente.js",
+    "apple-touch-icon.png",
+    "favicon-32.png",
+    "icon-512.png"
+  ],
+  "directories": [
+    "img",
+    "audio",
+    "laminas"
+  ],
+  "legalReady": false
+}

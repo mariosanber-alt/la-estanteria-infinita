@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "la-estanteria-infinita",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-11-18",
+  "vars": {
+    "SITE_ID": "la-estanteria-infinita",
+    "CONTACT_ENABLED": "false",
+    "LEGAL_READY": "false"
+  }
+}

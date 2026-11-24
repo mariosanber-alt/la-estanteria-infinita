@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --ink: #0d1019;
   --ink-2: #141826;
   --paper: #f1ead9;
@@ -564,3 +564,20 @@ body.fire-full { overflow: hidden; }
 .lock-btn b { font-size: 1.05rem; }
 .lock-btn:hover { background: #f0c066; color: #1a1206; }
 .car-track figure.lock:hover img { transform: none; }
+
+/* fondos de las novelas nuevas y carruseles verticales */
+.soon.luz { --soon-rgb: 14, 19, 29; }
+.soon.vecino { --soon-rgb: 21, 13, 10; }
+.soon.bg { isolation: isolate; }
+.soon-bg { position: absolute; inset: 0; z-index: -1; }
+.soon-bg img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; opacity: 0; transition: opacity 1.6s ease; }
+.soon-bg img.on { opacity: 1; }
+.soon-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(var(--soon-rgb), .92) 0%, rgba(var(--soon-rgb), .74) 48%, rgba(var(--soon-rgb), .42) 100%), linear-gradient(0deg, rgba(var(--soon-rgb), .88) 0%, rgba(var(--soon-rgb), 0) 40%); }
+.car-note a { color: #f0c066; }
+.car.v .car-track figure { flex-basis: clamp(130px, 17%, 175px); }
+.car.v .car-track img { aspect-ratio: 9 / 16; }
+@media (max-width: 760px) {
+  .soon-bg::after { background: rgba(var(--soon-rgb), .8); }
+  .car.v .car-track figure { flex-basis: 140px; }
+}
+@media (prefers-reduced-motion: reduce) { .soon-bg img { transition: none; } }

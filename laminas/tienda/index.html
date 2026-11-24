@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Láminas · La Estantería Infinita</title>
+<meta name="description" content="Láminas ilustradas de las novelas de Mario S. Bermejo: Cuentas de Ordal, Tres reglas para no quererte, Lo que la luz dejó atrás y Un vecino de más. Compra directa.">
+<meta name="theme-color" content="#1c140e">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Karla:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css?v=7">
+<style>
+.lam-hero { padding: 64px 0 24px; }
+.lam-hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; letter-spacing: -.015em; }
+.lam-hero h1 span { color: var(--amber); }
+.lam-hero .lead { margin-top: 20px; max-width: 38em; color: var(--paper-dim); font-size: 1.05rem; }
+.lam-index { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.lam-index a { border: 1px solid var(--line); border-radius: 99px; padding: 7px 18px; text-decoration: none; font-size: .9rem; color: var(--paper); }
+.lam-index a:hover { border-color: var(--amber); color: var(--amber); }
+section.lam-libro { padding: 64px 0 8px; border-top: 1px solid var(--line); margin-top: 48px; }
+.lam-head { display: grid; grid-template-columns: 110px 1fr; gap: 26px; align-items: center; margin-bottom: 30px; }
+.lam-cover { width: 110px; box-shadow: 0 10px 22px var(--shadow); }
+.lam-head h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); margin: 4px 0 10px; }
+.lam-blurb { max-width: 44em; color: var(--paper-dim); }
+.lam-blurb a, .lam-blurb b { color: var(--amber); }
+.lam-pack { display: inline-block; margin-top: 16px; background: var(--amber); color: var(--on-accent); font: 700 .95rem var(--sans); padding: 11px 22px; border-radius: 99px; text-decoration: none; transition: transform .2s, background .2s; }
+.lam-pack:hover { background: var(--btn-hover); transform: translateY(-2px); }
+.lam-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 28px 22px; }
+.lam { display: flex; flex-direction: column; }
+.lam-img { position: relative; aspect-ratio: 9 / 16; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 10px 22px var(--shadow); background: var(--ink-2); }
+.lam-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85); }
+.lam-img::after { content: ""; position: absolute; inset: 0; background: rgba(10, 6, 4, .3); }
+.lam-lock { position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 48px; height: 48px; border-radius: 50%; background: rgba(10, 6, 4, .78); border: 1px solid #f0c066; color: #f0c066; display: grid; place-items: center; }
+.lam-n { margin-top: 12px; font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; color: var(--cyan); }
+.lam h3 { font-family: var(--serif); font-weight: 600; font-size: 1.08rem; line-height: 1.3; margin: 2px 0 6px; }
+.lam-d { font-size: .92rem; line-height: 1.5; color: var(--paper-dim); flex: 1; }
+.lam-buy { margin-top: 12px; align-self: flex-start; background: var(--amber); color: var(--on-accent); font: 700 .88rem var(--sans); padding: 9px 16px; border-radius: 99px; text-decoration: none; transition: transform .2s, background .2s; }
+.lam-buy b { margin-left: 4px; }
+.lam-buy:hover { background: var(--btn-hover); transform: translateY(-2px); }
+.lam-pie { margin: 70px 0 60px; padding-top: 26px; border-top: 1px solid var(--line); color: var(--paper-dim); font-size: .95rem; max-width: 46em; }
+.lam-pie a { color: var(--amber); }
+@media (max-width: 760px) {
+  .lam-head { grid-template-columns: 80px 1fr; gap: 18px; }
+  .lam-cover { width: 80px; }
+  .lam-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  .lam-lock { width: 40px; height: 40px; }
+}
+</style>
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('tema'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark' && t !== 'fantasy') {
+      t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../../">La Estantería <em>Infinita</em></a>
+    <div class="head-right">
+      <nav>
+        <a href="../../">Inicio</a>
+        <a href="../../#proximamente">Próximamente</a>
+        <a href="../../#sincronia">Sincronía</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="lam-hero">
+    <h1>Láminas de <span>las novelas</span></h1>
+    <p class="lead">Ilustraciones de escenas de cada libro. Aquí las ves veladas: eliges la que te llama, pagas por PayPal con el importe ya puesto y te envío la lámina sin velar al correo que me indiques, normalmente en pocas horas.</p>
+    <nav class="lam-index" aria-label="Libros">
+      <a href="#ordal">Cuentas de Ordal</a>
+      <a href="#tres-reglas">Tres reglas para no quererte</a>
+      <a href="#luz">Lo que la luz dejó atrás</a>
+      <a href="#vecino">Un vecino de más</a>
+    </nav>
+  </div>
+
+  <section class="lam-libro" id="ordal">
+    <div class="lam-head">
+      <img class="lam-cover" src="../../img/cuentas-de-ordal.jpg" alt="Portada de Cuentas de Ordal">
+      <div>
+        <p class="kicker">Lanzamiento el 25 de diciembre de 2026</p>
+        <h2>Cuentas de Ordal</h2>
+        <p class="lam-blurb">Fantasía gótica de valle: un libro que anota quién paga cada favor. Diez de sus láminas están veladas aquí, a <b>0,20 €</b> cada una. Las otras cinco (I, III, V, VII y IX) las ves sin velo en <a href="../../#proximamente">el anuncio del libro</a>.</p>
+      </div>
+    </div>
+    <div class="lam-grid">
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-02-bloq.jpg" alt="Lámina velada: La lectura en la plaza" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina II</p>
+        <h3>La lectura en la plaza</h3>
+        <p class="lam-d">Ordal, un sábado de otoño. El pueblo entero, de pie, escuchando cómo se anota lo que debe cada uno.</p>
+        <a class="lam-buy" href="../ordal/?n=2" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-04-bloq.jpg" alt="Lámina velada: Las manos de Casa Lobera" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina IV</p>
+        <h3>Las manos de Casa Lobera</h3>
+        <p class="lam-d">Unas manos de anciana sobre un taburete de niña. Lo que el libro cobra no siempre se ve venir.</p>
+        <a class="lam-buy" href="../ordal/?n=4" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-06-bloq.jpg" alt="Lámina velada: La hora repetida" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VI</p>
+        <h3>La hora repetida</h3>
+        <p class="lam-d">Catalina atrasa la torre. Una escalera, un reloj enorme y una hora que se repite.</p>
+        <a class="lam-buy" href="../ordal/?n=6" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-08-bloq.jpg" alt="Lámina velada: Hielo y silencio" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VIII</p>
+        <h3>Hielo y silencio</h3>
+        <p class="lam-d">El entierro de Remedios. Nieve en el camposanto, un pueblo callado y nadie que quiera preguntar de qué murió.</p>
+        <a class="lam-buy" href="../ordal/?n=8" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-10-bloq.jpg" alt="Lámina velada: La casa de la ribera" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina X</p>
+        <h3>La casa de la ribera</h3>
+        <p class="lam-d">Humo al amanecer sobre la casa de la ribera. Alguien sigue encendiendo el fuego.</p>
+        <a class="lam-buy" href="../ordal/?n=10" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-11-bloq.jpg" alt="Lámina velada: El martes en la notaría" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina XI</p>
+        <h3>El martes en la notaría</h3>
+        <p class="lam-d">Quien pide, firma. La pluma espera sobre la página, y una vela alumbra lo que está a punto de escribirse.</p>
+        <a class="lam-buy" href="../ordal/?n=11" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-12-bloq.jpg" alt="Lámina velada: El abrigo pequeño" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina XII</p>
+        <h3>El abrigo pequeño</h3>
+        <p class="lam-d">Un abrigo de niño colgado, unas botas junto a la pared. Alguien aún espera en la casa.</p>
+        <a class="lam-buy" href="../ordal/?n=12" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-13-bloq.jpg" alt="Lámina velada: Treinta años de llaves" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina XIII</p>
+        <h3>Treinta años de llaves</h3>
+        <p class="lam-d">Inés guarda lo que nadie pregunta. Una puerta entreabierta, un manojo de llaves y treinta años de silencio.</p>
+        <a class="lam-buy" href="../ordal/?n=13" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-14-bloq.jpg" alt="Lámina velada: Ordal en la niebla" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina XIV</p>
+        <h3>Ordal en la niebla</h3>
+        <p class="lam-d">El valle, antes de que despierte. Un camino de piedra baja hacia el campanario.</p>
+        <a class="lam-buy" href="../ordal/?n=14" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/ordal-lamina-15-bloq.jpg" alt="Lámina velada: La letra de nadie" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina XV</p>
+        <h3>La letra de nadie</h3>
+        <p class="lam-d">Una línea que nadie escribió, firmada con una letra que no es de nadie.</p>
+        <a class="lam-buy" href="../ordal/?n=15" target="_blank" rel="noopener">Desbloquear <b>0,20 €</b></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="lam-libro" id="tres-reglas">
+    <div class="lam-head">
+      <img class="lam-cover" src="../../img/tres-reglas.jpg" alt="Portada de Tres reglas para no quererte">
+      <div>
+        <p class="kicker">Lanzamiento el 14 de febrero de 2027</p>
+        <h2>Tres reglas para no quererte</h2>
+        <p class="lam-blurb">Seis semanas, tres reglas y nada de enamorarse. Cinco láminas veladas de una novela a dos voces (+18), que se venden juntas: las 5 por <b>0,50 €</b>.</p>
+        <a class="lam-pack" href="../" target="_blank" rel="noopener">Desbloquear las 5 por <b>0,50 €</b></a>
+      </div>
+    </div>
+    <div class="lam-grid">
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/tres-reglas-gancho-1.jpg" alt="Lámina velada: Después del último servicio" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina 1</p>
+        <h3>Después del último servicio</h3>
+        <p class="lam-d">El comedor vacío, la luz de una sola lámpara y un trato que ninguno de los dos sabe cumplir.</p>
+              </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/tres-reglas-gancho-2.jpg" alt="Lámina velada: La lluvia no entraba en el trato" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina 2</p>
+        <h3>La lluvia no entraba en el trato</h3>
+        <p class="lam-d">Bajo el soportal, mientras llueve sobre la ciudad, las reglas empiezan a quedarse cortas.</p>
+              </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/tres-reglas-gancho-3.jpg" alt="Lámina velada: La cocina, a oscuras" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina 3</p>
+        <h3>La cocina, a oscuras</h3>
+        <p class="lam-d">Una mano en la mejilla, el delantal tirado sobre el taburete y la primera regla temblando.</p>
+              </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/tres-reglas-gancho-4.jpg" alt="Lámina velada: El coche azul" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina 4</p>
+        <h3>El coche azul</h3>
+        <p class="lam-d">Una calle de noche, un abrigo verde y una despedida que no acaba de serlo.</p>
+              </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/tres-reglas-gancho-5.jpg" alt="Lámina velada: Dormirse sin querer" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina 5</p>
+        <h3>Dormirse sin querer</h3>
+        <p class="lam-d">Una manta, un sofá y la mañana entrando por la ventana. Dormirse juntos no estaba en el trato.</p>
+              </article>
+    </div>
+  </section>
+
+  <section class="lam-libro" id="luz">
+    <div class="lam-head">
+      <img class="lam-cover" src="../../img/lo-que-la-luz-dejo-atras.jpg" alt="Portada de Lo que la luz dejó atrás">
+      <div>
+        <p class="kicker">Lanzamiento en abril de 2027</p>
+        <h2>Lo que la luz dejó atrás</h2>
+        <p class="lam-blurb">Fantasía de pueblo, íntima y pausada: Clara vuelve a Vallormes y tiene que leer el eco de luz de su propia familia. Diez láminas veladas, a <b>0,50 €</b> cada una.</p>
+      </div>
+    </div>
+    <div class="lam-grid">
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-01-bloq.jpg" alt="Lámina velada: La vuelta al pueblo" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina I</p>
+        <h3>La vuelta al pueblo</h3>
+        <p class="lam-d">Quince años después, el camino sigue siendo el mismo. Ella, no.</p>
+        <a class="lam-buy" href="../luz/?n=1" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-02-bloq.jpg" alt="Lámina velada: El molino viejo" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina II</p>
+        <h3>El molino viejo</h3>
+        <p class="lam-d">Entre los árboles, una rueda que lleva años sin girar. Todo el pueblo rodea este molino. Pregúntate por qué.</p>
+        <a class="lam-buy" href="../luz/?n=2" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-03-bloq.jpg" alt="Lámina velada: Los ecos de la cocina" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina III</p>
+        <h3>Los ecos de la cocina</h3>
+        <p class="lam-d">Con su placa en la mano, Clara lee lo que la luz guardó: quién se sentó a esta mesa, y qué se dijeron.</p>
+        <a class="lam-buy" href="../luz/?n=3" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-04-bloq.jpg" alt="Lámina velada: Mateo, al amanecer" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina IV</p>
+        <h3>Mateo, al amanecer</h3>
+        <p class="lam-d">Café caliente, el valle entre la niebla y una silla vacía a su lado. El hombre más fiable que Clara conoce.</p>
+        <a class="lam-buy" href="../luz/?n=4" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-05-bloq.jpg" alt="Lámina velada: El mostrador" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina V</p>
+        <h3>El mostrador</h3>
+        <p class="lam-d">En un pueblo pequeño, comprar el pan es una forma de preguntar. Una sonrisa amable y una respuesta que nunca llega.</p>
+        <a class="lam-buy" href="../luz/?n=5" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-06-bloq.jpg" alt="Lámina velada: El hueco" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VI</p>
+        <h3>El hueco</h3>
+        <p class="lam-d">Ecos de luz por todas partes, menos donde debería haber uno. A veces lo que falta pesa más que lo que se ve.</p>
+        <a class="lam-buy" href="../luz/?n=6" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-07-bloq.jpg" alt="Lámina velada: Despedirse" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VII</p>
+        <h3>Despedirse</h3>
+        <p class="lam-d">Vino solo a enterrar a su abuela. La niebla del cementerio parece tener otros planes.</p>
+        <a class="lam-buy" href="../luz/?n=7" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-08-bloq.jpg" alt="Lámina velada: El rodeo" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VIII</p>
+        <h3>El rodeo</h3>
+        <p class="lam-d">Cada vez que el camino pasa cerca del molino, Mateo da un rodeo. Esta vez, Clara se queda mirando por qué.</p>
+        <a class="lam-buy" href="../luz/?n=8" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-09-bloq.jpg" alt="Lámina velada: El arco de piedra" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina IX</p>
+        <h3>El arco de piedra</h3>
+        <p class="lam-d">Un callejón vacío, una farola encendida y alguien que espera en la sombra. Hay preguntas que se hacen mejor de noche.</p>
+        <a class="lam-buy" href="../luz/?n=9" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/luz-lamina-10-bloq.jpg" alt="Lámina velada: Todos los ecos" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina X</p>
+        <h3>Todos los ecos</h3>
+        <p class="lam-d">Cuando la placa se enciende, el molino se llena de vecinos que ya no están. Un secreto de veinte años sale a la luz.</p>
+        <a class="lam-buy" href="../luz/?n=10" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="lam-libro" id="vecino">
+    <div class="lam-head">
+      <img class="lam-cover" src="../../img/un-vecino-de-mas.jpg" alt="Portada de Un vecino de más">
+      <div>
+        <p class="kicker">Próximamente · 2027</p>
+        <h2>Un vecino de más</h2>
+        <p class="lam-blurb">Terror rural de ritmo pausado: veintitrés vecinos, un pueblo de Soria y una cuenta que no sale. Diez láminas veladas, a <b>0,50 €</b> cada una.</p>
+      </div>
+    </div>
+    <div class="lam-grid">
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-01-bloq.jpg" alt="Lámina velada: Diecinueve chimeneas" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina I</p>
+        <h3>Diecinueve chimeneas</h3>
+        <p class="lam-d">Llega de noche, con la carpeta del padrón bajo el brazo. Veintitrés vecinos, diecinueve chimeneas encendidas: haz la cuenta.</p>
+        <a class="lam-buy" href="../vecino/?n=1" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-02-bloq.jpg" alt="Lámina velada: Veintitrés tazas" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina II</p>
+        <h3>Veintitrés tazas</h3>
+        <p class="lam-d">Una taza por vecino, cada una con su nombre pintado. Una de ellas está caliente, y su dueño no vive aquí.</p>
+        <a class="lam-buy" href="../vecino/?n=2" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-03-bloq.jpg" alt="Lámina velada: El pino de las marcas" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina III</p>
+        <h3>El pino de las marcas</h3>
+        <p class="lam-d">Veinticuatro marcas en la corteza, un farol en el suelo y un anciano que las cuenta en silencio. El pueblo solo reconoce veintitrés.</p>
+        <a class="lam-buy" href="../vecino/?n=3" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-04-bloq.jpg" alt="Lámina velada: La sala de los abrigos" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina IV</p>
+        <h3>La sala de los abrigos</h3>
+        <p class="lam-d">Una mesa larga, sillas de sobra y abrigos colgados que nadie reclama. Alguien los cuelga cada noche.</p>
+        <a class="lam-buy" href="../vecino/?n=4" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-05-bloq.jpg" alt="Lámina velada: El banco del soportal" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina V</p>
+        <h3>El banco del soportal</h3>
+        <p class="lam-d">Una niña, un farol y un banco de piedra. En Navalsarda nadie está solo por casualidad.</p>
+        <a class="lam-buy" href="../vecino/?n=5" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-06-bloq.jpg" alt="Lámina velada: La piedra de las rayas" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VI</p>
+        <h3>La piedra de las rayas</h3>
+        <p class="lam-d">Rayas de cuenta en la piedra, un par de zapatillas al pie del camino y la niebla pegada al suelo. Nadie quiere hablar de ellas.</p>
+        <a class="lam-buy" href="../vecino/?n=6" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-07-bloq.jpg" alt="Lámina velada: La niña que dibuja" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VII</p>
+        <h3>La niña que dibuja</h3>
+        <p class="lam-d">Con sus pinturas de colores, dibuja uno por uno a todos los que viven en el pueblo. A todos.</p>
+        <a class="lam-buy" href="../vecino/?n=7" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-08-bloq.jpg" alt="Lámina velada: El padrón" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina VIII</p>
+        <h3>El padrón</h3>
+        <p class="lam-d">Sus fichas dicen que sobran catorce. Esta noche las revisa una por una, y las cuentas no salen.</p>
+        <a class="lam-buy" href="../vecino/?n=8" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-09-bloq.jpg" alt="Lámina velada: A la puerta, en la niebla" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina IX</p>
+        <h3>A la puerta, en la niebla</h3>
+        <p class="lam-d">Un hombre de espaldas, quieto ante la puerta del ayuntamiento. No hace ruido. No parece tener prisa.</p>
+        <a class="lam-buy" href="../vecino/?n=9" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+      <article class="lam">
+        <div class="lam-img"><img src="../../img/vecino-lamina-10-bloq.jpg" alt="Lámina velada: La cuenta en voz alta" loading="lazy"><span class="lam-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span></div>
+        <p class="lam-n">Lámina X</p>
+        <h3>La cuenta en voz alta</h3>
+        <p class="lam-d">Todo el pueblo, con un farol en la mano, contándose en la plaza. Al fondo, una sombra que no entra en la cuenta.</p>
+        <a class="lam-buy" href="../vecino/?n=10" target="_blank" rel="noopener">Desbloquear <b>0,50 €</b></a>
+      </article>
+    </div>
+  </section>
+
+  <p class="lam-pie">¿Cómo funciona? Pulsas «Desbloquear», dejas tu correo y pagas por PayPal. En cuanto veo el pago, te mando la lámina a ese correo. Cada lámina es un trozo de la historia para quien quiera llevárselo. <a href="../../">Volver a La Estantería Infinita</a>.</p>
+</div>
+</body>
+</html>

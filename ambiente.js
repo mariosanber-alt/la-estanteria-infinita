@@ -1,4 +1,4 @@
-﻿/* Sonido ambiente por secciones y chimenea.
+/* Sonido ambiente por secciones y chimenea.
    El audio solo arranca tras un gesto del usuario (botón de sonido o chimenea). */
 (function () {
   var SOUNDS = {

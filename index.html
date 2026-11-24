@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Karla:wght@400;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="styles.css?v=7">
 <script>
   (function () {
     var t = null;
@@ -49,6 +49,7 @@
     <div class="head-right">
       <nav>
         <a href="#proximamente">Próximamente</a>
+        <a href="laminas/tienda/">Láminas</a>
         <a href="#sincronia">Sincronía</a>
         <a href="#sueltas">Novelas</a>
         <a href="#autor">Autor</a>
@@ -106,7 +107,7 @@
 
     <div class="car" role="region" aria-roledescription="carrusel" aria-label="Láminas de Cuentas de Ordal">
       <p class="car-title">Láminas del libro</p>
-      <p class="car-note">Las láminas con candado se desbloquean por 0,20 € cada una: dejas tu correo, pagas por PayPal con el importe ya puesto y te la envío.</p>
+      <p class="car-note">Las láminas con candado se desbloquean por 0,20 € cada una: dejas tu correo, pagas por PayPal con el importe ya puesto y te la envío. <a href="laminas/tienda/#ordal">Ver las descripciones</a>.</p>
       <button class="car-btn car-prev" type="button" aria-label="Lámina anterior">&#8249;</button>
       <div class="car-track" tabindex="0">
         <figure><img src="img/ordal-lamina-01.jpg" alt="Lámina I: El libro, en su atril" loading="lazy"></figure>
@@ -171,7 +172,14 @@
   </aside>
 
   <!-- PRÓXIMAMENTE: LO QUE LA LUZ DEJÓ ATRÁS -->
-  <aside class="soon luz" id="lo-que-la-luz-dejo-atras" aria-label="Próximamente: Lo que la luz dejó atrás">
+  <aside class="soon luz bg" id="lo-que-la-luz-dejo-atras" aria-label="Próximamente: Lo que la luz dejó atrás">
+    <div class="soon-bg" aria-hidden="true">
+      <img class="on" src="img/luz-fondo-1.jpg" alt="">
+      <img src="img/luz-fondo-2.jpg" alt="" loading="lazy">
+      <img src="img/luz-fondo-3.jpg" alt="" loading="lazy">
+      <img src="img/luz-fondo-4.jpg" alt="" loading="lazy">
+      <img src="img/luz-fondo-5.jpg" alt="" loading="lazy">
+    </div>
     <div class="soon-cover"><img src="img/lo-que-la-luz-dejo-atras.jpg" alt="Portada de Lo que la luz dejó atrás" loading="lazy"></div>
     <div class="soon-text">
       <p class="soon-flag"><span></span>Lanzamiento en abril de 2027</p>
@@ -187,10 +195,36 @@
       </ul>
       <p class="soon-follow">Te avisaré del lanzamiento en <a href="https://www.instagram.com/la.estanteriainfinita/" target="_blank" rel="noopener">Instagram</a> y <a href="https://www.tiktok.com/@la.estanteria.infinita" target="_blank" rel="noopener">TikTok</a>.</p>
     </div>
+
+    <div class="car v" role="region" aria-roledescription="carrusel" aria-label="Láminas de Lo que la luz dejó atrás">
+      <p class="car-title">Láminas del libro</p>
+      <p class="car-note">Cada lámina se desbloquea por 0,50 €: dejas tu correo, pagas por PayPal con el importe ya puesto y te la envío. <a href="laminas/tienda/#luz">Ver las descripciones</a>.</p>
+      <button class="car-btn car-prev" type="button" aria-label="Lámina anterior">&#8249;</button>
+      <div class="car-track" tabindex="0">
+        <figure class="lock"><img src="img/luz-lamina-01-bloq.jpg" alt="Lámina bloqueada (Lámina I: La vuelta al pueblo)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-02-bloq.jpg" alt="Lámina bloqueada (Lámina II: El molino viejo)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-03-bloq.jpg" alt="Lámina bloqueada (Lámina III: Los ecos de la cocina)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-04-bloq.jpg" alt="Lámina bloqueada (Lámina IV: Mateo, al amanecer)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-05-bloq.jpg" alt="Lámina bloqueada (Lámina V: El mostrador)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-06-bloq.jpg" alt="Lámina bloqueada (Lámina VI: El hueco)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-07-bloq.jpg" alt="Lámina bloqueada (Lámina VII: Despedirse)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-08-bloq.jpg" alt="Lámina bloqueada (Lámina VIII: El rodeo)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-09-bloq.jpg" alt="Lámina bloqueada (Lámina IX: El arco de piedra)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/luz-lamina-10-bloq.jpg" alt="Lámina bloqueada (Lámina X: Todos los ecos)" loading="lazy"><a class="lock-btn" href="laminas/luz/?n=10" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+      </div>
+      <button class="car-btn car-next" type="button" aria-label="Lámina siguiente">&#8250;</button>
+    </div>
   </aside>
 
   <!-- PRÓXIMAMENTE: UN VECINO DE MÁS -->
-  <aside class="soon vecino" id="un-vecino-de-mas" aria-label="Próximamente: Un vecino de más">
+  <aside class="soon vecino bg" id="un-vecino-de-mas" aria-label="Próximamente: Un vecino de más">
+    <div class="soon-bg" aria-hidden="true">
+      <img class="on" src="img/vecino-fondo-1.jpg" alt="">
+      <img src="img/vecino-fondo-2.jpg" alt="" loading="lazy">
+      <img src="img/vecino-fondo-3.jpg" alt="" loading="lazy">
+      <img src="img/vecino-fondo-4.jpg" alt="" loading="lazy">
+      <img src="img/vecino-fondo-5.jpg" alt="" loading="lazy">
+    </div>
     <div class="soon-cover"><img src="img/un-vecino-de-mas.jpg" alt="Portada de Un vecino de más" loading="lazy"></div>
     <div class="soon-text">
       <p class="soon-flag"><span></span>Próximamente · 2027</p>
@@ -205,6 +239,25 @@
         <li>España vaciada</li>
       </ul>
       <p class="soon-follow">Te avisaré del lanzamiento en <a href="https://www.instagram.com/la.estanteriainfinita/" target="_blank" rel="noopener">Instagram</a> y <a href="https://www.tiktok.com/@la.estanteria.infinita" target="_blank" rel="noopener">TikTok</a>.</p>
+    </div>
+
+    <div class="car v" role="region" aria-roledescription="carrusel" aria-label="Láminas de Un vecino de más">
+      <p class="car-title">Láminas del libro</p>
+      <p class="car-note">Cada lámina se desbloquea por 0,50 €: dejas tu correo, pagas por PayPal con el importe ya puesto y te la envío. <a href="laminas/tienda/#vecino">Ver las descripciones</a>.</p>
+      <button class="car-btn car-prev" type="button" aria-label="Lámina anterior">&#8249;</button>
+      <div class="car-track" tabindex="0">
+        <figure class="lock"><img src="img/vecino-lamina-01-bloq.jpg" alt="Lámina bloqueada (Lámina I: Diecinueve chimeneas)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-02-bloq.jpg" alt="Lámina bloqueada (Lámina II: Veintitrés tazas)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-03-bloq.jpg" alt="Lámina bloqueada (Lámina III: El pino de las marcas)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=3" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-04-bloq.jpg" alt="Lámina bloqueada (Lámina IV: La sala de los abrigos)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=4" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-05-bloq.jpg" alt="Lámina bloqueada (Lámina V: El banco del soportal)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=5" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-06-bloq.jpg" alt="Lámina bloqueada (Lámina VI: La piedra de las rayas)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-07-bloq.jpg" alt="Lámina bloqueada (Lámina VII: La niña que dibuja)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-08-bloq.jpg" alt="Lámina bloqueada (Lámina VIII: El padrón)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-09-bloq.jpg" alt="Lámina bloqueada (Lámina IX: A la puerta, en la niebla)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+        <figure class="lock"><img src="img/vecino-lamina-10-bloq.jpg" alt="Lámina bloqueada (Lámina X: La cuenta en voz alta)" loading="lazy"><a class="lock-btn" href="laminas/vecino/?n=10" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Desbloquear<b>0,50 €</b></a></figure>
+      </div>
+      <button class="car-btn car-next" type="button" aria-label="Lámina siguiente">&#8250;</button>
     </div>
   </aside>
 
@@ -591,11 +644,10 @@
     var rt; drawShelves();
     window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(drawShelves, 200); });
 
-    /* carrusel de láminas */
-    var car = document.querySelector('.car');
-    if (car) {
-      var track = car.querySelector('.car-track'), timer = null, paused = false;
-      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* carruseles de láminas */
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('.car').forEach(function (car, k) {
+      var track = car.querySelector('.car-track'), paused = false;
       var step = function () { var f = track.querySelector('figure'); return f.getBoundingClientRect().width + 14; };
       var go = function (dir) {
         var max = track.scrollWidth - track.clientWidth;
@@ -608,19 +660,21 @@
       track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1); });
       ['mouseenter', 'focusin', 'touchstart'].forEach(function (ev) { car.addEventListener(ev, function () { paused = true; }, { passive: true }); });
       ['mouseleave', 'focusout'].forEach(function (ev) { car.addEventListener(ev, function () { paused = false; }); });
-      if (!reduce) timer = setInterval(function () { if (!paused && !document.hidden) go(1); }, 4200);
-    }
+      if (!reduce) setInterval(function () { if (!paused && !document.hidden) go(1); }, 4200 + k * 600);
+    });
 
-    var trImgs = document.querySelectorAll('.tr-bg img');
-    if (trImgs.length > 1 && !reduce) {
-      var trIdx = 0;
+    /* fondos que se funden (Tres reglas y las dos novelas nuevas) */
+    document.querySelectorAll('.tr-bg, .soon-bg').forEach(function (bg, k) {
+      var imgs = bg.querySelectorAll('img');
+      if (imgs.length < 2 || reduce) return;
+      var idx = 0;
       setInterval(function () {
         if (document.hidden) return;
-        trImgs[trIdx].classList.remove('on');
-        trIdx = (trIdx + 1) % trImgs.length;
-        trImgs[trIdx].classList.add('on');
-      }, 5200);
-    }
+        imgs[idx].classList.remove('on');
+        idx = (idx + 1) % imgs.length;
+        imgs[idx].classList.add('on');
+      }, 5200 + k * 800);
+    });
 
     var box = document.getElementById('sparkles');
     for (var i = 0; i < 34; i++) {

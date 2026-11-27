@@ -7,6 +7,10 @@
   var err = document.getElementById('err');
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (!cfg || !['0.20', '0.50'].includes(cfg.importe)) {
+      err.textContent = 'Selecciona una compra válida desde la estantería.';
+      return;
+    }
     var email = document.getElementById('email').value.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
       err.textContent = 'Revisa el correo: parece incompleto.';
@@ -14,7 +18,7 @@
     }
     err.textContent = '';
     var base = location.href.replace(/laminas\/.*$/, '');
-    var desc = cfg.item + ' · enviar a: ' + email;
+    var desc = cfg.item;
     var url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick'
       + '&business=' + VENDEDOR
       + '&item_name=' + encodeURIComponent(desc)

@@ -1,0 +1,10 @@
+{
+  "name": "la-estanteria-infinita",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check:release": "node scripts/check-release.mjs"
+  }
+}
